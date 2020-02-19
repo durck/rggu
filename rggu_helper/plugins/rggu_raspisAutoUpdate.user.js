@@ -7,7 +7,7 @@
 // @description  plugin can automatic get update of raspis when changed some parametrs
 // @author       Durck
 // @match        https://*.rsuh.ru/raspis*
-// @include      https://code.jquery.com/jquery-3.4.1.slim.min.js
+// @require      https://code.jquery.com/jquery-3.4.1.slim.min.js
 // @grant        none
 // ==/UserScript==
 

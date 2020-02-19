@@ -8,7 +8,7 @@
 // @author       Durck
 // @match        https://*.rsuh.ru/*
 // @match        https://*.rggu.ru/*
-// @include      https://code.jquery.com/jquery-3.4.1.slim.min.js
+// @require      https://code.jquery.com/jquery-3.4.1.slim.min.js
 // @grant        none
 // ==/UserScript==
 
@@ -22,14 +22,14 @@ function wrapper(plugin_info) {
         function prepPluginsToLoad() {
             function safeSetup(setup) {
                 if (!setup) {
-                    console.log('plugin must provide setup function');
+                    alert('plugin must provide setup function');
                     return;
                 }
                 try {
                     setup.call(this);
                 } catch (err) {
                     var name = info.script && info.script.name || info.pluginId;
-                    console.log('error starting plugin:', name, ', error:', err);
+                    alert('error starting plugin:', name, ', error:', err);
                 }
             }
 
