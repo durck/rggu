@@ -39,11 +39,6 @@ function wrapper(plugin_info) {
     }
 
     var setup = function () {
-        if (window.plugin.rggu === undefined) {
-            alert("ERROR: 'raspis_helper' require 'rggu_helper'!!!");
-            return;
-        }
-
         $('select#formob').change(window.plugin.rgguRaspisAutoUpdate.getRaspis);
         $('select#kyrs').change(window.plugin.rgguRaspisAutoUpdate.getRaspis);
         $('select#srok').change(window.plugin.rgguRaspisAutoUpdate.getRaspis);
@@ -52,10 +47,9 @@ function wrapper(plugin_info) {
 
     setup.info = plugin_info; //add the script info data to the function as a property
     if (!window.bootPlugins) window.bootPlugins = [];
-    window.bootPlugins.push(setup);
     // if IITC has already booted, immediately run the 'setup' function
     if (window.rgguLoaded && typeof setup === 'function') setup();
-}
+    else window.bootPlugins.push(setup);
 
 var script = document.createElement('script');
 var info = {};
