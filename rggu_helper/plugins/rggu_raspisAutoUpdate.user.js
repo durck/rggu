@@ -2,7 +2,8 @@
 // @name         rggu_raspis_autoUpdater
 // @namespace    rggu_helper
 // @version      0.0.1
-// @dow
+// @updateURL
+// @dowloadURL
 // @description  plugin can automatic get update of raspis when changed some parametrs
 // @author       Durck
 // @match        https://*.rsuh.ru/raspis*

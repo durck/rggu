@@ -2,6 +2,8 @@
 // @name         rggu_helper
 // @namespace    rggu_helper
 // @version      0.0.1
+// @updateURL
+// @dowloadURL
 // @description  try to take over the world!
 // @author       Durck
 // @match        https://*.rsuh.ru/*
