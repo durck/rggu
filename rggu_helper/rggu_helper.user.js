@@ -22,14 +22,14 @@ function wrapper(plugin_info) {
         function prepPluginsToLoad() {
             function safeSetup(setup) {
                 if (!setup) {
-                    console.log('plugin must provide setup function');
+                    alert('plugin must provide setup function');
                     return;
                 }
                 try {
                     setup.call(this);
                 } catch (err) {
                     var name = info.script && info.script.name || info.pluginId;
-                    console.log('error starting plugin:', name, ', error:', err);
+                    alert('error starting plugin:', name, ', error:', err);
                 }
             }
 
