@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         rggu_raspis
+// @name         rggu_raspis_autoUpdater
 // @namespace    rggu_helper
 // @version      0.1
-// @description  try to take over the world!
+// @description  plugin can automatic get update of raspis when changed some parametrs
 // @author       Durck
 // @match        https://*.rsuh.ru/raspis*
 // @include      https://code.jquery.com/jquery-3.4.1.slim.min.js
@@ -12,9 +12,9 @@
 function wrapper(plugin_info) {
     if (window.plugin !== 'function') window.plugin = function() {};
 
-    window.plugin.rgguRaspis = function() {};
+    window.plugin.rgguRaspisAutoUpdate = function() {};
 
-    window.plugin.rgguRaspis.getRaspis = function() {
+    window.plugin.rgguRaspisAutoUpdate.getRaspis = function() {
         var formob = $('#formob :selected').val();
         var kyrs = $('#kyrs :selected').val();
         var srok = $('#srok :selected').val();
@@ -42,10 +42,10 @@ function wrapper(plugin_info) {
             return;
         }
 
-        $('select#formob').change(window.plugin.rgguRaspis.getRaspis);
-        $('select#kyrs').change(window.plugin.rgguRaspis.getRaspis);
-        $('select#srok').change(window.plugin.rgguRaspis.getRaspis);
-        $('select#caf').change(window.plugin.rgguRaspis.getRaspis);
+        $('select#formob').change(window.plugin.rgguRaspisAutoUpdate.getRaspis);
+        $('select#kyrs').change(window.plugin.rgguRaspisAutoUpdate.getRaspis);
+        $('select#srok').change(window.plugin.rgguRaspisAutoUpdate.getRaspis);
+        $('select#caf').change(window.plugin.rgguRaspisAutoUpdate.getRaspis);
     };
 
     setup.info = plugin_info; //add the script info data to the function as a property
