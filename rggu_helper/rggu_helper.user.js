@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         rggu_helper
 // @namespace    rggu_helper
-// @version      0.1
+// @version      0.0.1
 // @description  try to take over the world!
 // @author       Durck
 // @match        https://*.rsuh.ru/*
