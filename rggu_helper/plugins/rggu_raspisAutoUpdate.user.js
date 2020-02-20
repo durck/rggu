@@ -36,6 +36,8 @@ function wrapper(plugin_info) {
 
       window.plugin.rgguRaspisAutoUpdate = function() {};
 
+      window.plugin.rgguRaspisAutoUpdate.fields = ['kyrs', 'caf', 'srok', 'formob', 'cafzn'];
+
       window.plugin.rgguRaspisAutoUpdate.getRaspis = function() {
           var formob = $('#formob :selected').val();
           var kyrs = $('#kyrs :selected').val();
@@ -120,6 +122,16 @@ function wrapper(plugin_info) {
     }
 
     var setup = function () {
+      // $('#dop1').show();
+      // window.plugin.rgguRaspisAutoUpdate.fields.forEach((item, i) => {
+      //   if ($.cookie(item).toLowerCase() == 'undefined')
+      //   if (item == 'cafzn') {
+      //     $('#' + item + ' :selected').html($.cookie(item));
+      //   }
+      //   else {
+      //     $('#' + item + ' :selected').val($.cookie(item))
+      //   }
+      // });
         $('select#formob').change(() => {window.plugin.rgguRaspisAutoUpdate.changedData('formob')});
         $('select#kyrs').change(() => {window.plugin.rgguRaspisAutoUpdate.changedData('kyrs')});
         $('select#srok').change(() => {window.plugin.rgguRaspisAutoUpdate.changedData('srok')});
