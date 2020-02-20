@@ -8,7 +8,7 @@
 // @author       Durck
 // @match        https://*.rsuh.ru/*
 // @match        https://*.rggu.ru/*
-// @require      https://code.jquery.com/jquery-3.4.1.slim.min.js
+// @include      https://code.jquery.com/jquery-3.4.1.slim.min.js
 // @grant        none
 // ==/UserScript==
 

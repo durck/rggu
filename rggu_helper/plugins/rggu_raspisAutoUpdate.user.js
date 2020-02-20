@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         rggu_raspis_autoUpdater
+// @name         rggu_raspis
 // @namespace    rggu_helper
 // @version      0.0.1
 // @updateURL
@@ -7,7 +7,7 @@
 // @description  plugin can automatic get update of raspis when changed some parametrs
 // @author       Durck
 // @match        https://*.rsuh.ru/raspis*
-// @require      https://code.jquery.com/jquery-3.4.1.slim.min.js
+// @include      https://code.jquery.com/jquery-3.4.1.slim.min.js
 // @grant        none
 // ==/UserScript==
 
@@ -50,6 +50,7 @@ function wrapper(plugin_info) {
     // if IITC has already booted, immediately run the 'setup' function
     if (window.rgguLoaded && typeof setup === 'function') setup();
     else window.bootPlugins.push(setup);
+  }
 
 var script = document.createElement('script');
 var info = {};
