@@ -42,11 +42,19 @@ function wrapper(plugin_info) {
         );
     }
 
+    window.plugin.rgguRaspisAutoUpdate.changedData = function (d) {
+      GM_setValue(d, $('#menu_' + d).val());
+      if (d == 'caf') {
+        GM_setValue('cafzn', $('#menu_caf :selected').html());
+      }
+      window.plugin.rgguRaspisAutoUpdate.getRaspis();
+    }
+
     var setup = function () {
-        $('select#formob').change(window.plugin.rgguRaspisAutoUpdate.getRaspis);
-        $('select#kyrs').change(window.plugin.rgguRaspisAutoUpdate.getRaspis);
-        $('select#srok').change(window.plugin.rgguRaspisAutoUpdate.getRaspis);
-        $('select#caf').change(window.plugin.rgguRaspisAutoUpdate.getRaspis);
+        $('select#formob').change(() => {window.plugin.rgguRaspisAutoUpdate.changedData('formob')});
+        $('select#kyrs').change(() => {window.plugin.rgguRaspisAutoUpdate.changedData('kyrs')});
+        $('select#srok').change(() => {window.plugin.rgguRaspisAutoUpdate.changedData('srok')});
+        $('select#caf').change(() => {window.plugin.rgguRaspisAutoUpdate.changedData('caf')});
     };
 
     setup.info = plugin_info; //add the script info data to the function as a property
