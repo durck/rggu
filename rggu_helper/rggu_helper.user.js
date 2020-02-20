@@ -8,7 +8,11 @@
 // @author       Durck
 // @match        https://*.rsuh.ru/*
 // @match        https://*.rggu.ru/*
-// @require      https://code.jquery.com/jquery-3.4.1.slim.min.js
+// @require      https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js
+// @require      https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js
+// @require      https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js
+// @grant        GM_getValue
+// @grant        GM_setValue
 // @grant        none
 // ==/UserScript==
 

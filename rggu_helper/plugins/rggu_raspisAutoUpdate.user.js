@@ -7,7 +7,11 @@
 // @description  plugin can automatic get update of raspis when changed some parametrs
 // @author       Durck
 // @match        https://*.rsuh.ru/raspis*
-// @require      https://code.jquery.com/jquery-3.4.1.slim.min.js
+// @require      https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js
+// @require      https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js
+// @require      https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js
+// @grant        GM_getValue
+// @grant        GM_setValue
 // @grant        none
 // ==/UserScript==
 
@@ -50,6 +54,7 @@ function wrapper(plugin_info) {
     // if IITC has already booted, immediately run the 'setup' function
     if (window.rgguLoaded && typeof setup === 'function') setup();
     else window.bootPlugins.push(setup);
+  }
 
 var script = document.createElement('script');
 var info = {};
