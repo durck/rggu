@@ -12,7 +12,6 @@
 // @include      https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js
 // @grant        GM_getValue
 // @grant        GM_setValue
-// @grant        none
 // ==/UserScript==
 
 function wrapper(plugin_info) {
